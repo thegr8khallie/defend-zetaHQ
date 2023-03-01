@@ -6,7 +6,7 @@ This is a 2D grid-based tower defense game built with vanilla javascript. This i
 
 - Play this live:
 
-[Start Game](https://brseghese.github.io/pp-tower-defense-game) 🎮
+[Start Game](https://defendzetahq.netlify.app/)
 
 - On Local Machine:
 
