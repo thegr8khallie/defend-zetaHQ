@@ -123,10 +123,6 @@ class Projectile {
     this.x += this.speed;
   }
   draw() {
-    // ctx.fillStyle = "black";
-    // ctx.beginPath();
-    // ctx.arc(this.x, this.y, this.width, 0, Math.PI * 2);
-    // ctx.fill();
     ctx.drawImage(laser, this.x, this.y - 20, 40, 40);
   }
 }
@@ -180,8 +176,6 @@ class Defender {
     this.chosenDefender = chosenDefender;
   }
   draw() {
-    // ctx.fillStyle = "blue";
-    // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = "black";
     ctx.font = "15px Orbitron";
     ctx.fillText(Math.floor(this.health), this.x + 14, this.y + 10);
@@ -465,12 +459,9 @@ class Enemy {
     }
   }
   draw() {
-    // ctx.fillStyle = "red";
-    // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = "black";
     ctx.font = "15px Orbitron";
     ctx.fillText(Math.floor(this.health), this.x + 9, this.y + 9);
-    // ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dy);
     ctx.drawImage(
       this.enemyType,
       this.frameX * this.spriteWidth,
@@ -545,8 +536,6 @@ class Resources {
     this.maxFrame = 4;
   }
   draw() {
-    // ctx.fillStyle = "yellow";
-    // ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.fillStyle = "black";
     ctx.font = "15px Orbitron";
     ctx.fillText(this.amount, this.x + 20, this.y);
@@ -611,11 +600,6 @@ function handleGameStatus() {
     ctx.fillText("Game Over", 175, 250);
   }
   if (score >= winningScore && enemies.length === 0) {
-    // ctx.fillStyle = "gold";
-    // ctx.font = "60px Orbitron";
-    // ctx.fillText("LEVEL COMPLETE", 130, 250);
-    // ctx.font = "30px Orbitron";
-    // ctx.fillText("You win with " + score + " points!", 134, 300);
     modalLevels.push(new ModalNextLevel(300, 200, 300, 200, 340, 260, 220, 80));
   }
 }
